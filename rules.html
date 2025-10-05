@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVBC 2025 Rulebook</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #24124e 0%, #3e1f7a 100%);
+            min-height: 100vh;
+            padding: 80px 20px 40px 20px;
+            line-height: 1.8;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 1000;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            margin-bottom: 40px;
+            text-decoration: underline;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .rulebook-content {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h2 {
+            color: #ffd700;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        h3 {
+            color: #ffd700;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        p, li {
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            color: #ffd700;
+            font-weight: 700;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        strong {
+            color: #ffd700;
+            font-weight: 600;
+        }
+
+        .tie-format {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .tie-column h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .tie-column p {
+            text-align: center;
+            margin: 8px 0;
+        }
+
+        .match-order {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .match-order p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 60px 15px 30px;
+            }
+
+            .rulebook-content {
+                padding: 20px;
+            }
+
+            .tie-format {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← Back to Home</a>
+
+    <div class="container">
+        <h1>Urban Jilla Arya Vysya Badminton Championship<br>Rulebook 2025</h1>
+
+        <div class="rulebook-content">
+            <p><strong>Tournament is conducted with 12 teams</strong></p>
+            
+            <ul>
+                <li>Each team contains <strong>11 players (11 Men)</strong></li>
+                <li>Out of <strong>12 teams each team will play TWO League ties with different teams</strong>. The league format is shown below:</li>
+            </ul>
+
+            <div class="tie-format">
+                <div class="tie-column">
+                    <h3>Tie 1</h3>
+                    <p>A - G</p>
+                    <p>B - H</p>
+                    <p>C - I</p>
+                    <p>D - J</p>
+                    <p>E - K</p>
+                    <p>F - L</p>
+                </div>
+                <div class="tie-column">
+                    <h3>Tie 2</h3>
+                    <p>A - L</p>
+                    <p>B - K</p>
+                    <p>C - J</p>
+                    <p>D - I</p>
+                    <p>E - H</p>
+                    <p>F - G</p>
+                </div>
+            </div>
+
+            <h2>Match Format</h2>
+            <ul>
+                <li>Each league match contains:
+                    <ul>
+                        <li>Men Singles (MS) — 2</li>
+                        <li>Men Doubles (MD) — 6</li>
+                        <li>Total matches — 8</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><strong class="underline">Note:</strong></p>
+            <ul>
+                <li><strong>1.</strong> All the singles and doubles events are conducted for <strong>21 points only</strong> (2 points difference is mandatory extension up to 30 points and no extension after 29th point. 30th is the golden point) throughout the tournament.</li>
+                <li><strong>2.</strong> In each team 3 players will get a chance to play 2 matches. Only one Player is allowed to play 2 doubles format.</li>
+            </ul>
+
+            <h2>Trump Matches</h2>
+            <p>Each league match contains <strong>TWO TRUMP MATCHES</strong>. One trump is decided of your own and the second trump match is predefined mandatory for last doubles match.</p>
+
+            <div class="match-order">
+                <h3>The Tie Order</h3>
+                <p>MS &nbsp;&nbsp; MS</p>
+                <p>MD &nbsp;&nbsp; MD</p>
+                <p>MD &nbsp;&nbsp; MD</p>
+                <p>MD &nbsp;&nbsp; MD (Trump mandatory for both teams)</p>
+            </div>
+
+            <p><strong class="underline">Note:</strong></p>
+            <ul>
+                <li><strong>1.</strong> The player who plays the singles event is eligible to play the men's doubles event as their second match.</li>
+                <li><strong>2.</strong> No player is allowed to play 2 doubles matches in a single tie.</li>
+                <li><strong>3.</strong> Any player (i.e. A, B+, B) can be eligible for extra doubles only when their A+ player is dropped out or absent in their team and the same team owner can decide their own player to replace the A+.</li>
+            </ul>
+
+            <h2>Team Composition</h2>
+            <p>Each team contains:</p>
+            <ul>
+                <li><strong>1 A+ graded</strong> men player</li>
+                <li><strong>1 A graded</strong> men player</li>
+                <li><strong>3 B+ graded</strong> men players</li>
+                <li><strong>6 B graded</strong> men players</li>
+            </ul>
+
+            <h2>Auction Rules</h2>
+            <ul>
+                <li>Auction will be done in the <strong>Ascending Order</strong> (i.e. starts with B, B+, A and ends with A+, <span class="underline">this year A+ player will also appear in the auction</span>)</li>
+                <li>Each team will be funded with <strong>150,000/- points</strong>. (Base price of each player is 1000 points irrespective of the grade and Rank)</li>
+            </ul>
+
+            <h2>Player Replacement Rules</h2>
+            <ul>
+                <li>If any player suddenly exits/is not available for the tournament, a new player will be allotted by committee member through a draw from the reserved player list.</li>
+                <li>If there are no reserved players available in the reserved list then the opponent owner will decide who to play from the absentees team from the same category.</li>
+            </ul>
+
+            <h2>Tie-Breaker</h2>
+            <p>If any league match has a tie, there will be a single knockout match (men doubles for 21 points) conducted to decide which team will proceed to the next round (it applies to group exit round also).</p>
+
+            <h2>General Rules</h2>
+            <ul>
+                <li><strong>The Committee and Umpires' decision is final.</strong></li>
+                <li>Tournament will start by sharp <strong>9 AM</strong></li>
+                <li>Pools draw will be decided on <strong>Oct 12th</strong> (tournament day)</li>
+                <li>We are not responsible if any of the team captain/owner is not available at the draws.</li>
+                <li>Breakfast and lunch will be provided on Oct 12th.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

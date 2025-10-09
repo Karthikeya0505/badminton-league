@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Power Rangers - Players</title>
+    <title>PVS Silver - Players</title>
     <style>
         * {
             box-sizing: border-box;
@@ -63,7 +63,7 @@
         }
 
         .team-header h1 {
-            color: #ffd700;
+            color: #c0c0c0;
             font-size: clamp(2rem, 5vw, 2.8rem);
             margin-bottom: 10px;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -189,7 +189,7 @@
         .player-name {
             font-size: 1.4rem;
             font-weight: 700;
-            color: #ffd700;
+            color: #c0c0c0;
             line-height: 1.2;
         }
 
@@ -269,7 +269,7 @@
         }
 
         .player-details-container strong {
-            color: #ffd700;
+            color: #c0c0c0;
             font-weight: 600;
         }
 
@@ -350,7 +350,7 @@
     <a href="../teams.html" class="back-link">← Back to Teams</a>
 
     <div class="team-header">
-        <h1>⚡ Power Rangers</h1>
+        <h1>💠 Blue Stone Blasters</h1>
     </div>
 
     <div class="search-container">
@@ -379,17 +379,17 @@
 
     <script>
         const playerData = [
-    { firstName: "Prudhvi", lastName: "Bolisetty", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "8125856572", age: 26, grade: "B" },
-    { firstName: "Sudhakar", lastName: "Buragadda", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9849383322", age: 60, grade: "B" },
-    { firstName: "Keerthi Sahith", lastName: "CH", playStyle: "RIGHT HAND", city: "VIJAYAWADA", mobile: "9182086606", age: 17, grade: "B" },
-    { firstName: "Adi Shankar", lastName: "CH", playStyle: "RIGHT HAND", city: "VIJAYAWADA", mobile: "9346519943", age: 39, grade: "B" },
-    { firstName: "Santosh pavan Kumar", lastName: "Jakka", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "8121426970", age: 31, grade: "B+" },
-    { firstName: "Srihari", lastName: "Khajjayam", playStyle: "RIGHT HAND", city: "Vinukonda", mobile: "9866467558", age: 38, grade: "A+" },
-    { firstName: "Dinesh Chakravarthy", lastName: "Morisetty", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9949422273", age: 39, grade: "B+" },
-    { firstName: "Satya", lastName: "Peruri", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9848667435", age: 37, grade: "B+" },
-    { firstName: "Anil Kumar", lastName: "Pesala", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9492977277", age: 40, grade: "B" },
-    { firstName: "Kumarraja", lastName: "Sugreevu", playStyle: "RIGHT HAND", city: "Vinukonda", mobile: "9885257556", age: 39, grade: "A" },
-    { firstName: "Ravi Kumar", lastName: "Tammana", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9908686866", age: 43, grade: "B" }
+    { firstName: "Karthikeya", lastName: "Atmakuri", playStyle: "RIGHT HAND", city: "Vijayawda", mobile: "8179796013", age: 23, grade: "B" },
+    { firstName: "Prasad", lastName: "Batchu", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "7893068777", age: 51, grade: "B" },
+    { firstName: "RAGHAVENDRA RAO", lastName: "D", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "8885814382", age: 36, grade: "B+" },
+    { firstName: "Tarun", lastName: "Dupaguntla", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "7799926667", age: 22, grade: "B" },
+    { firstName: "Srinivasarao", lastName: "Dupaguntla", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9866840340", age: 45, grade: "B" },
+    { firstName: "Nihar", lastName: "Kanigicherla", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9703133327", age: 33, grade: "A" },
+    { firstName: "Manikanta", lastName: "Mylavarapu", playStyle: "RIGHT HAND", city: "Nandigama", mobile: "6309104984", age: 23, grade: "A+" },
+    { firstName: "Anil Kumar", lastName: "Peruri", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9603889869", age: 38, grade: "B" },
+    { firstName: "Mahesh", lastName: "Rachapudi", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9542289833", age: 24, grade: "B" },
+    { firstName: "S V MAHESH KUMAR", lastName: "Sriram", playStyle: "RIGHT HAND", city: "Vijayawada", mobile: "9848032853", age: 40, grade: "B+" },
+    { firstName: "Lakshmi Narayana", lastName: "Garre", playStyle: "RIGHT HAND", city: "Suryapeta", mobile: "7396320010", age: 42, grade: "B+" }
 ];
 
 
@@ -435,30 +435,28 @@
                 playerCard.setAttribute('data-name', dataName);
                 
                 playerCard.innerHTML = `
+                    <div class="player-card-main">
+                        <img src="${DEFAULT_PHOTO_URL}" 
+                            alt="${fullName}" 
+                            class="player-photo" 
+                            onclick="openModal(this, '${fullName.replace(/'/g, "\\'")}')">
+                        <div class="player-info">
+                            <div class="player-name">${player.firstName}</div>
+                            <div class="player-surname">${player.lastName}</div>
+                            <div class="player-grade">Grade: ${player.grade}</div>
+                        </div>
+                        <button class="player-details-toggle" 
+                            data-target="details-${index}" 
+                            onclick="toggleDetails(this)"></button>
+                    </div>
                     
-    <div class="player-card-main">
-        <img src="${DEFAULT_PHOTO_URL}" 
-            alt="${fullName}" 
-            class="player-photo" 
-            onclick="openModal(this, '${fullName.replace(/'/g, "\\'")}')">
-        <div class="player-info">
-            <div class="player-name">${player.firstName}</div>
-            <div class="player-surname">${player.lastName}</div>
-            <div class="player-grade">Grade: ${player.grade}</div>
-        </div>
-        <button class="player-details-toggle" 
-            data-target="details-${index}" 
-            onclick="toggleDetails(this)"></button>
-    </div>
-    
-    <div class="player-details-container" id="details-${index}">
-        <p><b>Age:</b> ${player.age || 'N/A'}</p>
-        <p><b>City:</b> ${player.city || 'N/A'}</p>
-        <p><b>Play Style:</b> ${player.playStyle || 'N/A'}</p>
-        <p><b>Mobile:</b> ${player.mobile || 'N/A'}</p>
-    </div>
-`;
-
+                    <div class="player-details-container" id="details-${index}">
+                        <p><b>Age:</b> ${player.age || 'N/A'}</p>
+                        <p><b>City:</b> ${player.city || 'N/A'}</p>
+                        <p><b>Play Style:</b> ${player.playStyle || 'N/A'}</p>
+                        <p><b>Mobile:</b> ${player.mobile || 'N/A'}</p>
+                    </div>
+                `;
                 
                 playersContainer.insertBefore(playerCard, noResults);
             });

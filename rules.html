@@ -82,7 +82,7 @@
             color: #ffd700;
             margin-top: 25px;
             margin-bottom: 15px;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
         }
 
         h3 {
@@ -97,7 +97,7 @@
             font-size: 1rem;
         }
 
-        ul {
+        ul, ol {
             margin-left: 25px;
             margin-bottom: 20px;
         }
@@ -134,6 +134,7 @@
         .tie-column p {
             text-align: center;
             margin: 8px 0;
+            font-size: 1.1rem;
         }
 
         .match-order {
@@ -141,13 +142,37 @@
             padding: 20px;
             border-radius: 10px;
             margin: 20px 0;
+        }
+
+        .match-order-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .match-order-grid p {
+            font-size: 1.05rem;
+            padding: 8px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 5px;
             text-align: center;
         }
 
-        .match-order p {
-            font-size: 1.1rem;
-            margin: 10px 0;
-            font-weight: 600;
+        .info-box {
+            background: rgba(255, 215, 0, 0.15);
+            border-left: 4px solid #ffd700;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .warning-box {
+            background: rgba(255, 100, 100, 0.15);
+            border-left: 4px solid #ff6464;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 5px;
         }
 
         @media (max-width: 768px) {
@@ -164,6 +189,10 @@
                 gap: 20px;
             }
 
+            .match-order-grid {
+                grid-template-columns: 1fr;
+            }
+
             h1 {
                 font-size: 1.5rem;
             }
@@ -177,13 +206,15 @@
         <h1>Urban Jilla Arya Vysya Badminton Championship<br>Rulebook 2025</h1>
 
         <div class="rulebook-content">
+            <h2>Tournament Structure</h2>
             <p><strong>Tournament is conducted with 12 teams</strong></p>
             
             <ul>
                 <li>Each team contains <strong>11 players (11 Men)</strong></li>
-                <li>Out of <strong>12 teams each team will play TWO League ties with different teams</strong>. The league format is shown below:</li>
+                <li>Out of <strong>12 teams</strong>, each team will play <strong>TWO ties</strong> with 2 different teams</li>
             </ul>
 
+            <h3>Tie Format</h3>
             <div class="tie-format">
                 <div class="tie-column">
                     <h3>Tie 1</h3>
@@ -206,79 +237,89 @@
             </div>
 
             <h2>Match Format</h2>
+            <p><strong>Each Tie contains:</strong></p>
             <ul>
-                <li>Each league match contains:
-                    <ul>
-                        <li>Men Singles (MS) — 2</li>
-                        <li>Men Doubles (MD) — 6</li>
-                        <li>Total matches — 8</li>
-                    </ul>
-                </li>
+                <li>Men Singles (MS) — 2</li>
+                <li>Men Doubles (MD) — 6</li>
+                <li><strong>Total matches — 8</strong></li>
             </ul>
 
-            <p><strong class="underline">Note:</strong></p>
             <ul>
-                <li><strong>1.</strong> All the singles and doubles events are conducted for <strong>21 points only</strong> (2 points difference is mandatory extension up to 30 points and no extension after 29th point. 30th is the golden point) throughout the tournament.</li>
-                <li><strong>2.</strong> In each team 3 players will get a chance to play 2 matches. Only one Player is allowed to play 2 doubles format.</li>
+                <li>In each team, <strong>3 players</strong> will get a chance to play 2 matches</li>
             </ul>
 
-            <h2>Trump Matches</h2>
-            <p>Each league match contains <strong>TWO TRUMP MATCHES</strong>. One trump is decided of your own and the second trump match is predefined mandatory for last doubles match.</p>
-
-            <div class="match-order">
-                <h3>The Tie Order</h3>
-                <p>MS &nbsp;&nbsp; MS</p>
-                <p>MD &nbsp;&nbsp; MD</p>
-                <p>MD &nbsp;&nbsp; MD</p>
-                <p>MD &nbsp;&nbsp; MD (Trump mandatory for both teams)</p>
+            <div class="info-box">
+                <p><strong>Note:</strong> All singles and doubles events are conducted for <strong>21 points only</strong> (2 points difference is mandatory extension up to 30 points and no extension after 29th point. 30th is the golden point) throughout the tournament.</p>
             </div>
 
-            <p><strong class="underline">Note:</strong></p>
+            <h3>The Tie Order</h3>
+            <div class="match-order">
+                <div class="match-order-grid">
+                    <p>1. MS</p>
+                    <p>5. MS</p>
+                    <p>2. MD</p>
+                    <p>6. MD</p>
+                    <p>3. MD</p>
+                    <p>7. MD</p>
+                    <p>4. MD</p>
+                    <p>8. MD <strong>(Trump mandatory for both teams)</strong></p>
+                </div>
+            </div>
+
+            <h2>Trump Matches</h2>
+            <p>Each league match contains <strong>TWO TRUMP MATCHES</strong>:</p>
+            <ol>
+                <li><strong>One trump</strong> is decided by your own team</li>
+                <li><strong>The second trump match</strong> is predefined mandatory for the last doubles match for both sides
+                    <ul>
+                        <li>The winner of this match is awarded with <strong>two points</strong></li>
+                        <li>The loser team will be deducted by <strong>one point</strong></li>
+                    </ul>
+                </li>
+                <li>You <strong>can't apply trump again</strong> for final doubles</li>
+            </ol>
+
+            <h2>Points System</h2>
             <ul>
-                <li><strong>1.</strong> The player who plays the singles event is eligible to play the men's doubles event as their second match.</li>
-                <li><strong>2.</strong> No player is allowed to play 2 doubles matches in a single tie.</li>
-                <li><strong>3.</strong> Any player (i.e. A, B+, B) can be eligible for extra doubles only when their A+ player is dropped out or absent in their team and the same team owner can decide their own player to replace the A+.</li>
+                <li>Each team will get rewarded with <strong>1 point</strong> for a regular match if they won</li>
+                <li>No points for a losing team</li>
+                <li>If a team wins their <strong>own trump match</strong>, they will be rewarded with <strong>2 points</strong></li>
+                <li>If a team loses their own trump match, the losing team loses <strong>1 point</strong></li>
+                <li>The winning team is rewarded with <strong>1 point</strong> as usual</li>
             </ul>
+
+            <h3>Tie-Breaker</h3>
+            <p>In any scenario where the team score is tied, they have to play a <strong>MD match for 21 points</strong>. The winner will get awarded with <strong>one point</strong> and this point will be added to the total team score (this applies to decide the final 4 teams).</p>
 
             <h2>Team Composition</h2>
             <p>Each team contains:</p>
             <ul>
-                <li><strong>1 A+ graded</strong> men player</li>
-                <li><strong>1 A graded</strong> men player</li>
-                <li><strong>3 B+ graded</strong> men players</li>
-                <li><strong>6 B graded</strong> men players</li>
-            </ul>
-
-            <h2>Auction Rules</h2>
-            <ul>
-                <li>Auction will be done in the <strong>Ascending Order</strong> (i.e. starts with B, B+, A and ends with A+, <span class="underline">this year A+ player will also appear in the auction</span>)</li>
-                <li>Each team will be funded with <strong>150,000/- points</strong>. (Base price of each player is 1000 points irrespective of the grade and Rank)</li>
+                <li><strong>1 A+</strong> graded men player</li>
+                <li><strong>1 A</strong> graded men player</li>
+                <li><strong>3 B+</strong> graded men players</li>
+                <li><strong>6 B</strong> graded men players</li>
             </ul>
 
             <h2>Player Replacement Rules</h2>
             <ul>
-                <li>If any player suddenly exits/is not available for the tournament, a new player will be allotted by committee member through a draw from the reserved player list.</li>
-                <li>If there are no reserved players available in the reserved list then the opponent owner will decide who to play from the absentees team from the same category.</li>
+                <li>If any player suddenly exits or is not available for the tournament, a new player will be allotted by the committee member through a draw from the <strong>reserved player list</strong></li>
+                <li>If there are no reserved players available, then the <strong>opponent owner will decide</strong> whom to play from your team (should be from the same category)</li>
             </ul>
 
-            <h2>Tie-Breaker</h2>
-            <p>If any league match has a tie, there will be a single knockout match (men doubles for 21 points) conducted to decide which team will proceed to the next round (it applies to group exit round also).</p>
-
             <h2>General Rules</h2>
+            <div class="warning-box">
+                <p><strong>The Committee and Umpires' decision is final</strong></p>
+            </div>
+
             <ul>
-                <li><strong>The Committee and Umpires' decision is final.</strong></li>
+                <li><strong>Pools draw</strong> will be decided on <strong>Oct 12th</strong> (tournament day)</li>
+                <li>By <strong>8:30 AM</strong>, breakfast will be arranged, followed by match draws system</li>
+                <li>We are not responsible if any of the team captain/owner is not available at the draws</li>
+                <li>Other than the players, either the <strong>captain or owner</strong> only one person is allowed to discuss clarifications throughout the tournament</li>
                 <li>Tournament will start by sharp <strong>9 AM</strong></li>
-                <li>Pools draw will be decided on <strong>Oct 12th</strong> (tournament day)</li>
-                <li>We are not responsible if any of the team captain/owner is not available at the draws.</li>
-                <li>Breakfast and lunch will be provided on Oct 12th.</li>
+                <li><strong>Breakfast and lunch</strong> will be provided on Oct 12th</li>
             </ul>
         </div>
     </div>
-    
-    <h2>My Image from Google Drive</h2>
-    <img src="https://drive.google.com/thumbnail?id=17Bhwnt_Nprvh0XUuDqegut3_gpc87TDh&sz=w1000" 
-     alt="Drive Image" width="400" style="border-radius:10px;">
-
-
 </body>
 </html>
